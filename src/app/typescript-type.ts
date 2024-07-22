@@ -251,7 +251,9 @@ type TPick = Pick<Horse, 'field'>
 
 type Exclude<T, U> = T extends U ? never : T
 
-const excludeValue: Exclude<Horse[keyof Horse], string> = 34;
+type TExcludeStayBool = Exclude<number | string | boolean, number | string>
+
+const excludeValue: Exclude<Horse[keyof Horse], string> = 34 || {left: '', right: ''};
 
 type Extract<T, U> = T extends U ? T : never;
 
