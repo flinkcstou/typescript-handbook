@@ -42,6 +42,7 @@ interface TransportMode {
 type Primitive = string | number | boolean
 
 const data = ['text 1', 'text 2'] as const;
+
 type Data = typeof data[number] // 'text 1' | 'text 2'
 
 const locales = [
